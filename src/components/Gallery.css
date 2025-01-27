@@ -1,0 +1,49 @@
+/* Gallery Container */
+.gallery {
+    padding: 2rem;
+    background-color: #f8f8f8;
+    text-align: center;
+    overflow: hidden; /* Hide overflow to ensure only 5 images are shown */
+  }
+  
+  /* Wrapper around the grid to control viewport size */
+  .gallery-wrapper {
+    width: 100%;
+    overflow: hidden; /* Hide any extra images outside of the viewport */
+  }
+  
+  /* Gallery Grid */
+  .gallery-grid {
+    display: flex;
+    transition: transform 1s ease-in-out; /* Smooth slide transition */
+  }
+  
+  /* Gallery Item */
+  .gallery-item {
+    flex: 0 0 20%; /* Each image takes 20% of the width (5 images visible at once) */
+    padding: 0 0.5rem;
+  }
+  
+  /* Gallery Image */
+  .gallery-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover; /* Ensure images fit inside the container without stretching */
+  }
+  
+  /* Optional: Add some styles for responsiveness */
+  @media (max-width: 768px) {
+    .gallery-item {
+      flex: 0 0 30%; /* Show 3 images at a time on tablets */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .gallery-item {
+      flex: 0 0 50%; /* Show 2 images at a time on mobile */
+    }
+    .gallery-image{
+        height: 180px;
+    }
+  }
+  

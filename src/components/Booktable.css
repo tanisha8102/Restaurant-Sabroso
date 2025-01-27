@@ -1,0 +1,145 @@
+/* Section background styles */
+.book-table {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Align content to the right */
+    height: 250px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden; /* Prevent animation overflow */
+  }
+  
+  /* Content section animation */
+  @keyframes slideInFromRight {
+    from {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .book-table-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Align content to the right */
+    justify-content: center;
+    height: 100%;
+    text-align: right; /* Right-align text */
+    color: white;
+    padding: 0 16px;
+    opacity: 0; /* Initially hidden */
+    transform: translateX(100%); /* Positioned off-screen (right) */
+    transition: opacity 0.5s ease-out, transform 0.9s ease-out;
+  }
+  
+  .book-table-content.slide-in {
+    opacity: 1; /* Fully visible */
+    transform: translateX(0); /* Slide into place */
+  }
+  
+  .book-table-content:not(.slide-in) {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  
+  /* Text styles */
+  .book-table-content h2 {
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 200;
+  }
+  
+  .book-table-content h1 {
+    font-size: 1.7rem;
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+    font-style: italic;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  
+  .book-table-content p {
+    font-size: 0.7rem;
+    max-width: 250px;
+    font-weight: 200;
+    color: rgb(220, 218, 218);
+  }
+  
+  .book-table-content button {
+    padding: 0.75rem 2rem;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    border: none;
+    font-weight: 200;
+  }
+  
+  /* Responsiveness */
+  @media (max-width: 768px) {
+    .book-table {
+      height: auto;
+      padding: 1rem;
+      margin-top: 50px;
+    }
+  
+    .book-table-content {
+      text-align: right; /* Keep text aligned to the right */
+      padding: 0 16px;
+    }
+  
+    .book-table-content h2 {
+      font-size: 0.5rem;
+    }
+  
+    .book-table-content h1 {
+      font-size: 1rem;
+    }
+  
+    .book-table-content p {
+      font-size: 0.6rem;
+      max-width: 100px;
+    }
+  
+    .book-table-content button {
+      padding: 0.5rem 1.2rem;
+      font-size: 0.7rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .book-table-content {
+      text-align: right; /* Keep text aligned to the right */
+      padding: 0 8px;
+    }
+  
+    .book-table-content h2 {
+      font-size: 0.4rem;
+    }
+  
+    .book-table-content h1 {
+      font-size: 0.8rem;
+    }
+  
+    .book-table-content p {
+      font-size: 0.4rem;
+      max-width: 130px;
+    }
+  
+    .book-table-content button {
+      padding: 0.3rem 1rem;
+      font-size: 0.5rem;
+    }
+  }
+  

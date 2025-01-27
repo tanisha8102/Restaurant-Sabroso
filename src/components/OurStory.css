@@ -1,0 +1,121 @@
+/* Styles for the Our Story Section */
+.our-story {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+    background-color: #ffffff;
+    color: rgb(255, 255, 255);
+    padding-top: 6rem;
+   
+}
+
+.our-story-content {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    padding: 0 16px;
+}
+
+.our-story-subtitle {
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 200;
+   
+}
+
+.our-story-title {
+    font-size: 1.7rem;
+    animation-delay: 0.4s;
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+    font-style: italic;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+.out-story-description {
+    font-size: 0.7rem;
+    max-width: 28rem;
+    animation-delay: 0.6s;
+    font-weight: 200;
+    color: rgb(93, 92, 92);
+}
+
+.images {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.image {
+    width: 55%; /* Ensure same width for both images */
+    height: 65%;
+    aspect-ratio: 3 / 2; /* Maintain a consistent aspect ratio (3:4) */
+    object-fit: cover; /* Ensure image content scales properly */
+    transition: transform 0.3s ease;
+}
+
+/* Responsive Styles */
+@media (max-width: 767px) {
+    .our-story {
+        height: auto; /* Allow the section height to adjust dynamically */
+        padding: 1rem; /* Reduce overall padding */
+        padding-top: 80px; /* Reduce top padding */
+    }
+
+    .title {
+        font-size: 2rem; /* Reduce font size for smaller screens */
+        margin-bottom: 0.5rem; /* Reduce space below the title */
+    }
+
+    .out-story-description {
+        font-size: 0.9rem; /* Make text more readable on smaller screens */
+        padding: 0 1rem;
+        margin-bottom: 1rem; /* Reduce space below the description */
+    }
+
+    .images {
+        flex-direction: column; /* Stack images vertically */
+        gap: 1rem; /* Reduce gap between images */
+        margin-top: 20px; /* Add consistent spacing above images */
+        justify-content: center; /* Center images vertically */
+        align-items: center; /* Center images horizontally */
+    }
+
+    .image {
+        width: 80%; /* Scale images for smaller screens */
+        aspect-ratio: 3 / 2; /* Maintain consistent aspect ratio */
+        height: auto; /* Let the height be determined by the aspect ratio */
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 1.8rem; /* Further reduce font size */
+    }
+
+    .out-story-description {
+        font-size: 0.8rem; /* Adjust text size */
+        margin-bottom: 0.5rem; /* Reduce margin below the description */
+    }
+
+    .images {
+        gap: 0.9rem; /* Reduce gap between images for smaller screens */
+    }
+
+    .image {
+        width: 90%; /* Make images slightly smaller for very small devices */
+        aspect-ratio: 3 / 2; /* Keep consistent aspect ratio */
+    }
+}

@@ -1,0 +1,99 @@
+.chef-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 100px;
+    background-color: #e7e5e5;
+  }
+  
+  .chef-image img {
+    max-width: 300px;
+    border-radius: 8px;
+  }
+  
+  .features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  .feature {
+    text-align: left;
+  }
+  
+  .icon-text {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+  }
+  
+  .icon-text img {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .feature h3 {
+    font-size: 1.2rem;
+    color: #333;
+    position: relative;
+    display: inline-block;
+    font-weight: 600;
+    font-style: italic;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+
+  .feature p{
+    font-size: 0.9rem;
+  }
+  
+  .feature h3 .underline {
+    display: block;
+    height: 1.5px;
+    width: 30%;
+    background-color: #e74c3c;
+    margin-top: 15px;
+  }
+  
+  @media (max-width: 768px) {
+    .chef-section {
+      padding: 20px;
+      flex-direction: column;
+    }
+  
+    .chef-image img {max-width: 200px;
+      margin-bottom: 20px;
+    }
+  
+    .features {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+    }
+  
+    .feature {
+      text-align: center;
+    }
+  
+    .feature h3 {
+      font-size: 0.6rem;
+    }
+  
+    .icon-text img {
+      width: 20px;
+      height: 20px;
+    }
+  
+    .icon-text {
+      justify-content: center;
+    }
+  
+    .feature h3 .underline {
+      width: 20%;
+      margin-top: 5px;
+    }
+  
+    .feature p {
+      font-size: 0.5rem;
+    }
+  }
+  
