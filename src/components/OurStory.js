@@ -15,8 +15,8 @@ const OurStory = () => {
       </div>
 
       <div className="images">
-        <img src={image1} alt="Restaurant Image 1" className="image" />
-        <img src={image2} alt="Restaurant Image 2" className="image" />
+        <img src={image1} alt="Our kitchen" className="image" />
+        <img src={image2} alt="Delicious dessert" className="image" />
       </div>
     </section>
   );
