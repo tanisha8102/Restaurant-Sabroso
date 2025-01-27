@@ -1,0 +1,41 @@
+/* MenuPage.css */
+
+/* Banner Section */
+.menu-page {
+  position: relative;
+  margin: 0;  /* Remove margin to avoid extra space */
+  padding: 0; /* Ensure no padding in the body */
+}
+
+.banner {
+  width: 100%;
+  height: 400px;
+  background-image: url('../assets/menu-banner.jpg'); /* Replace with your image URL */
+  background-size: cover;
+  background-position: center;
+  display: flex;               /* Use flexbox to center the text */
+  justify-content: center;     /* Align horizontally */
+  align-items: center;         /* Align vertically */
+  position: relative;          /* Make sure pseudo-element is positioned relative to this */
+}
+.banner::before {
+  content: "";                 /* Add content to make it visible */
+  position: absolute;          /* Position it absolutely within the .banner */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Black overlay with transparency */
+  z-index: 0;                  /* Position it behind the text */
+}
+
+.banner-text {
+  color: white;
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;  /* Remove default margin for better centering */
+  z-index: 1; /* Make sure text is on top of the overlay */
+  font-style: italic;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}

@@ -11,6 +11,9 @@ import Specialties from './components/Specialties';
 import Gallery from './components/Gallery';
 import ChefSection from './components/ChefSection';
 import Menu from './components/Menu';
+import TestimonialSection from './components/TestimonialSection';
+import BlogSection from './components/BlogSection';
+import Footer from './components/Footer';
 
 const HomePage = () => {
   const [currentImage, setCurrentImage] = useState(0);
@@ -87,6 +90,10 @@ const HomePage = () => {
       <Gallery/>
       <ChefSection/>
       <Menu/>
+      <TestimonialSection/>
+      <BlogSection/>
+      <Footer/>
+
     </div>
   );
 };
